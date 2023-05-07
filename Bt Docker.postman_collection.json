@@ -1,0 +1,720 @@
+{
+	"info": {
+		"_postman_id": "64be02ec-2197-4ca8-90c7-28f8c1f611e0",
+		"name": "Bt Docker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign-up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"email\": \"hung4@gmail.com\",\r\n        \"password\": \"1234\",\r\n        \"full_name\": \"Hung\",\r\n        \"age\": 22,\r\n        \"avatar\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/auth/sign-up",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"auth",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"email\": \"hung3@gmail.com\",\r\n        \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/auth/login",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update avatar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM4MTM4LCJleHAiOjE2ODE1Mzk5Mzh9.uOTL31aP5cQ0kSYXKKSIVnsUVjU7RupsAyb92xuFU_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ASUS/OneDrive/Pictures/Camera Roll/bep-hong-ngoai.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/user/update-avatar/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"update-avatar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create img",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgzNDY3MDQxLCJleHAiOjE2ODM0Njg4NDF9.Xh9PSTk_wJsiD6bnoKS4LYsvPHn9txyqeFvR7g1uLmc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image_name",
+							"value": "connhotmotchong",
+							"type": "default"
+						},
+						{
+							"key": "image_url",
+							"value": "ggggg",
+							"type": "default"
+						},
+						{
+							"key": "descr",
+							"value": "galaxyzzzzzzzz",
+							"type": "default"
+						},
+						{
+							"key": "user_id",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/Wordspace/Cyber_BackEnd/Net/img movie/con_nhot_mot_chong.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/img/create-image",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"img",
+						"create-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM4MTM4LCJleHAiOjE2ODE1Mzk5Mzh9.uOTL31aP5cQ0kSYXKKSIVnsUVjU7RupsAyb92xuFU_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"user_id\": 1,\r\n    \"image_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/img/save-image",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"img",
+						"save-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM4MTM4LCJleHAiOjE2ODE1Mzk5Mzh9.uOTL31aP5cQ0kSYXKKSIVnsUVjU7RupsAyb92xuFU_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 3,\r\n    \"comment\": \"tiện dụng\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/img/create-comment/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"img",
+						"create-comment",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get image",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM4MTM4LCJleHAiOjE2ODE1Mzk5Mzh9.uOTL31aP5cQ0kSYXKKSIVnsUVjU7RupsAyb92xuFU_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"image_name\": \"bep\",\r\n    \"image_url\": \"hhhhh\",\r\n    \"descr\": \"bep tốt\",\r\n    \"user_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/img/get-image",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"img",
+						"get-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Image Detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM4MTM4LCJleHAiOjE2ODE1Mzk5Mzh9.uOTL31aP5cQ0kSYXKKSIVnsUVjU7RupsAyb92xuFU_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/img/get-image-detail/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"img",
+						"get-image-detail",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get CommentDetail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM4MTM4LCJleHAiOjE2ODE1Mzk5Mzh9.uOTL31aP5cQ0kSYXKKSIVnsUVjU7RupsAyb92xuFU_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/img/get-comment-detail/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"img",
+						"get-comment-detail",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find image",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM4MTM4LCJleHAiOjE2ODE1Mzk5Mzh9.uOTL31aP5cQ0kSYXKKSIVnsUVjU7RupsAyb92xuFU_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\": \"bep\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/img/find-image",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"img",
+						"find-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM4MTM4LCJleHAiOjE2ODE1Mzk5Mzh9.uOTL31aP5cQ0kSYXKKSIVnsUVjU7RupsAyb92xuFU_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\": \"bep\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/user/get-user/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"get-user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get saved image list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM4MTM4LCJleHAiOjE2ODE1Mzk5Mzh9.uOTL31aP5cQ0kSYXKKSIVnsUVjU7RupsAyb92xuFU_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/user/account-information/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"account-information",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get created photo list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM4MTM4LCJleHAiOjE2ODE1Mzk5Mzh9.uOTL31aP5cQ0kSYXKKSIVnsUVjU7RupsAyb92xuFU_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/user/get-image-list/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"get-image-list",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get image save",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgzNDY4MTAwLCJleHAiOjE2ODM0Njk5MDB9.aofO_p3ewLvbpk3QHL16K8H4Xg__OXYuIb0XmcsYkIM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/img/get-img-save?userId=1&imgId=1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"img",
+						"get-img-save"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "imgId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM4MTM4LCJleHAiOjE2ODE1Mzk5Mzh9.uOTL31aP5cQ0kSYXKKSIVnsUVjU7RupsAyb92xuFU_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"image_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/img/delete-image",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"img",
+						"delete-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM4MTM4LCJleHAiOjE2ODE1Mzk5Mzh9.uOTL31aP5cQ0kSYXKKSIVnsUVjU7RupsAyb92xuFU_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjMsImVtYWlsIjoiaHVuZzNAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0IiwiZnVsbF9uYW1lIjoiUGhhbiBRdW9jIiwiYWdlIjoyMCwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjgxNTM2MDk1LCJleHAiOjE2ODE1Mzc4OTV9.e0ZOiNIoTRmY9BdKAkC2VYabR1TVezNxG2L29DDQt5Q",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\": \"phanhung@gmail.com\",\r\n   \"password\": \"12345\",\r\n   \"full_name\": \"Phan Quốc Hùng\",\r\n   \"age\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/user/update-user/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"update-user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080",
+			"type": "default"
+		}
+	]
+}

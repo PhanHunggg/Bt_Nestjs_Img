@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model comment {
+  comment_id   Int       @id @default(autoincrement())
+  user_id      Int?
+  image_id     Int?
+  comment_date DateTime? @db.DateTime(0)
+  content      String?   @db.VarChar(50)
+  user         user?     @relation(fields: [user_id], references: [user_id], onDelete: NoAction, onUpdate: NoAction, map: "comment_ibfk_1")
+  image        image?    @relation(fields: [image_id], references: [image_id], onDelete: NoAction, onUpdate: NoAction, map: "comment_ibfk_2")
+
+  @@index([image_id], map: "image_id")
+  @@index([user_id], map: "user_id")
+}
+
+model image {
+  image_id   Int          @id @default(autoincrement())
+  image_name String?      @db.VarChar(50)
+  image_url  String?      @db.VarChar(50)
+  descr      String?      @db.VarChar(50)
+  user_id    Int?
+  comment    comment[]
+  user       user?        @relation(fields: [user_id], references: [user_id], onDelete: NoAction, onUpdate: NoAction, map: "image_ibfk_1")
+  save_image save_image[]
+
+  @@index([user_id], map: "user_id")
+}
+
+model save_image {
+  save_id   Int       @id @default(autoincrement())
+  user_id   Int?
+  image_id  Int?
+  save_date DateTime? @db.DateTime(0)
+  user      user?     @relation(fields: [user_id], references: [user_id], onDelete: NoAction, onUpdate: NoAction, map: "save_image_ibfk_1")
+  image     image?    @relation(fields: [image_id], references: [image_id], onDelete: NoAction, onUpdate: NoAction, map: "save_image_ibfk_2")
+
+  @@index([image_id], map: "image_id")
+  @@index([user_id], map: "user_id")
+}
+
+model user {
+  user_id    Int          @id @default(autoincrement())
+  email      String?      @db.VarChar(50)
+  password   String?      @db.VarChar(50)
+  full_name  String?      @db.VarChar(50)
+  age        Int?
+  avatar     String?      @db.VarChar(50)
+  comment    comment[]
+  image      image[]
+  save_image save_image[]
+}
